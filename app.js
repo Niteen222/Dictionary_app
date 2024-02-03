@@ -7,8 +7,8 @@ const getdata = async (searchvalue) => {
     let jsondata = await data.json();
     console.log("fetch data here",jsondata);
 
-    let div = document.createElement("div");
-    div.classList.add("detail");
+    let div = document.createElement("div")
+
     div.innerHTML = `
             <h2>Word : <span>${jsondata[0].word}</span></h2>
             <br/>
@@ -21,7 +21,7 @@ const getdata = async (searchvalue) => {
             <h4>Example : <span>${jsondata[0].meanings[0].definitions[0].example == undefined? "Not Found" :jsondata[0].meanings[0].definitions[0].example  }</span></h4>
             <br/>
 
-            <h4> Synonyms :   <span>${jsondata[0].meanings[0].synonyms}</span></h4>
+            <h4> Synonyms :   <span class="" >${jsondata[0].meanings[0].synonyms}</span></h4>
             <br/>
 
             <a href=${jsondata[0].sourceUrls[0]} target="_blank">Read More</a>

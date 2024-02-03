@@ -16,6 +16,8 @@ nav{
     height: 80px;
 }
 .container{
+    background-image: url(bgimg.jpg);
+    background-size: cover;
     width: 600px;
     padding: 22px;
     background-color: white;
@@ -57,6 +59,13 @@ nav{
 .text p{
     margin-top: 18px;
 }
+.text h4{
+    margin-top: 18px;
+    color: rgb(5, 4, 4);
+    background-color: rgba(255, 255, 255, 0.781);
+    padding: 5px;
+    font-size: large;
+}
 .text a{
     padding: 6px 20px;
     background-color: blue;
@@ -69,6 +78,11 @@ nav{
 }
 .mar{
     display: flex;
+}
+
+.symnyms{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
