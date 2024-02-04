@@ -6,6 +6,9 @@
 body{
     font-family: 'Roboto','sans-serif';
 }
+.main{
+    padding: 30px;
+}
 nav{
     display: flex;
     justify-content: center;
@@ -13,7 +16,8 @@ nav{
     background-color: rgb(28, 91, 91);
     color: white;
     font-size: 28px;
-    height: 80px;
+    height: 90px;
+    border-radius: 10px;
 }
 .container{
     background-image: url(bgimg.jpg);
@@ -92,5 +96,25 @@ nav{
     .container{
         width: 80%;
     }
-    
+    nav{
+        font-size:15px;
+    }
+    .container input{
+        width: 90%;
+        padding: 10px;
+        height: 15px;
+        /* border: none; */
+        /* outline: none; */
+        background: color #0e0516;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+    .searchbar button{
+        width: 40%;
+        background-color: blue;
+        color: white;
+        font-size: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 }
