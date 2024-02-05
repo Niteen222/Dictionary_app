@@ -7,21 +7,19 @@ const getdata = async (searchvalue) => {
     let jsondata = await data.json();
     console.log("fetch data here",jsondata);
 
-    let div = document.createElement("div")
-
-    div.innerHTML = `
+   document.querySelector(".text").innerHTML = `
             <h2>Word : <span>${jsondata[0].word}</span></h2>
             <br/>
-            <h4> Parts of Speech : ${jsondata[0].meanings[0].partOfSpeech}</h4>
+            <p> Parts of Speech : ${jsondata[0].meanings[0].partOfSpeech}</p>
             <br/>
 
-            <h4> Meaning : <span>${jsondata[0].meanings[0].definitions[0].definition}</span></h4>
+            <p> Meaning : <span>${jsondata[0].meanings[0].definitions[0].definition}</span></p>
             <br/>
 
-            <h4>Example : <span>${jsondata[0].meanings[0].definitions[0].example == undefined? "Not Found" :jsondata[0].meanings[0].definitions[0].example  }</span></h4>
+            <p>Example : <span>${jsondata[0].meanings[0].definitions[0].example == undefined? "Not Found" :jsondata[0].meanings[0].definitions[0].example  }</span></p>
             <br/>
 
-            <h4> Synonyms :   <span class="" >${jsondata[0].meanings[0].synonyms}</span></h4>
+            <p> Synonyms : <span style="word-wrap: break-word;">${jsondata[0].meanings[0].synonyms}</span></p>
             <br/>
 
             <a href=${jsondata[0].sourceUrls[0]} target="_blank">Read More</a>
@@ -29,7 +27,6 @@ const getdata = async (searchvalue) => {
             <br/>
             <br/>
     `
-    document.querySelector(".text").appendChild(div)
 
     console.log(jsondata);
     console.log(jsondata[0].word);
